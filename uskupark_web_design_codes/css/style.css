@@ -1,0 +1,1184 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+  }
+  
+  #menu {
+    height: 80px;
+    padding: 0 20px;
+  }
+  
+  #logo {
+    font-size: 30px;
+    line-height: 80px;
+    color: #003666;
+    float: left;
+    display: flex;
+    align-items: center;
+    cursor: default;
+  }
+  
+  #logo img {
+    height: 60px;
+    margin-right: 10px;
+  }
+  
+  nav {
+    float: right;
+    line-height: 80px;
+  }
+  
+  nav a:link {
+    text-decoration: none;
+    margin-right: 25px;
+    color: #003666;
+  }
+  
+  nav a:hover {
+    border-bottom: 2px solid #003666;
+  }
+  
+  nav a:visited {
+    text-decoration: none;
+    margin-right: 25px;
+    color: #003666;
+  }
+  
+  .icon {
+    margin-right: 7px;
+    font-size: 16px;
+  }
+  
+  #homepage {
+    height: 865px;
+    width: 100%;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  #black {
+    height: 865px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;
+  }
+  
+  #context {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    color: white;
+    font-size: 25px;
+  }
+  
+  #sensordata {
+    font-family: 'Nunito', sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #sensordata td,
+  #sensordata th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #sensordata tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #sensordata tr:hover {
+    background-color: #ddd;
+  }
+  
+  #sensordata th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #09b3ad;
+    color: white;
+  }
+  
+  #sensordata td:first-child {
+    /* Added */
+    font-weight: bold;
+  }
+  
+  .refresh-button {
+    font-family: 'Nunito', sans-serif;
+    float: right;
+    top: 10px;
+    right: 10px;
+    background-color: #09b3ad;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  
+  .refresh-button:hover {
+    background-color: #099691;
+  }
+  
+  #park.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    height: 60vh;
+    margin-left: 60px;
+
+  }
+  
+  .rectangle {
+    width: 230px;
+    height: 380px;
+    background-color: rgb(33, 33, 33);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: green;
+    border-width: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+  }
+  
+  .circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+  }
+  
+  .label {
+    color: white;
+    font-size: 75px;
+    cursor: default;
+    position: absolute;
+    text-align: center;
+    z-index: 4;
+  }
+  
+  .carA1 {
+    width: 81%;
+    height: 81%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 5;
+
+  }
+
+  .buttonA1 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px;  /* +40 */
+    left: 70px;   /* +110 */
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA1NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 72px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA2 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px;
+    left: 220px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA2NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 222px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA3 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px;
+    left: 370px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA3NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 372px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA4 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px;
+    left: 520px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA4NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 522px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB1 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 670px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB1NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 672px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB2 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 820px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB2NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 822px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB3 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 970px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB3NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 972px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB4 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 1120px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonB4NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 1122px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC1 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 1270px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC1NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 1272px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC2 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 1420px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC2NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 1422px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC3 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 1570px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC3NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 1572px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC4 {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 41px; /* Adjust the top value to stack it on top of buttonA4 */
+    left: 1720px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonC4NO {
+    font-family: 'Nunito', sans-serif;
+    position: absolute;
+    bottom: 1px;
+    left: 1722px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    object-fit: cover;
+    object-position: bottom;
+    z-index: 1;
+  }
+
+  .buttonA1:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonA1NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonA2:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonA2NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonA3:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonA3NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonA4:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonA4NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+
+  .buttonB1:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonB1NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+  
+  .buttonB2:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonB2NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonB3:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonB3NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonB4:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonB4NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  
+  .buttonC1:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonC1NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonC2:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonC2NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonC3:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonC3NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .buttonC4:hover {
+    background-color: rgb(141, 4, 4)
+  }
+  .buttonC4NO:hover {
+    background-color: rgb(1, 90, 1);
+  }
+
+  .available-lots {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: #09b3ad;
+    color: white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: default;
+  }
+
+
+  @media screen and (max-width:1280px) {
+
+
+    #park.grid-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
+      height: 60vh;
+      margin-left: 10px;
+  
+    }
+    
+    .rectangle {
+      width: 180px;
+      height: 260px;  
+    }
+    
+    .circle {
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      border-style: solid;
+      border-color: white;
+      border-width: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      z-index: 3;
+    }
+    
+    .label {
+      color: white;
+      font-size: 50px;
+      cursor: default;
+      position: absolute;
+      text-align: center;
+      z-index: 4;
+    }
+    
+    .buttonA1 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 15px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA1NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 17px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA2 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 105px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA2NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 107px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA3 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 227px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA3NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 229px;   /* +90 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA4 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 317px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonA4NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 319px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB1 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 442px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB1NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 444px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB2 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 532px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB2NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 534px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB3 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 653px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB3NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 655px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB4 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 743px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonB4NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 745px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC1 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 870px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC1NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 872px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC2 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 960px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC2NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 962px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC3 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 1085px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC3NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 1087px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC4 {
+      position: absolute;
+      bottom: 35px;  /* +40 */
+      left: 1175px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+  
+    .buttonC4NO {
+      position: absolute;
+      bottom: 1px;  /* +40 */
+      left: 1177px;   /* +110 */
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 11px;
+      z-index: 1;
+    }
+
+    .refresh-button {
+      font-family: 'Nunito', sans-serif;
+      float: right;
+      top: 10px;
+      right: 10px;
+      background-color: #09b3ad;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+
+    .available-lots {
+      font-family: 'Nunito', sans-serif;
+      font-size: 15px;
+      float: right;
+      margin-top: 10px;
+      margin-right: 5px;
+      background-color: #09b3ad;
+      color: white;
+      border-radius: 4px;
+      padding: 7px 14px;
+    }
+
+    #sensordata td,
+  #sensordata th {
+    border: 1px solid #ddd;
+    padding: 6px;
+  }
+
+  #homepage {
+    height: 609px;
+    width: 100%;
+    background-image: url("../img/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  #black {
+    height: 609px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;
+  }
+  
+    
+  }
+
+  @media (max-width: 768px) {
+    /* Adjustments for tablet and mobile devices */
+  
+    #menu {
+      height: auto;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: column;
+      align-items: center;
+    }
+  
+    #logo {
+      font-size: 24px;
+      line-height: normal;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+  
+    #logo img {
+      height: 40px;
+      margin-right: 5px;
+    }
+  
+    nav {
+      line-height: normal;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 50px;
+    }
+  
+    nav a {
+      display: block;
+      margin: 5px 0;
+    }
+
+    #black {
+        height: 550;
+    }
+  
+    #park.grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      height: auto;
+      margin-left: 20px;
+    }
+  
+    .rectangle {
+      width: 100%;
+      height: 250px;
+      margin-bottom: 20px;
+    }
+  
+    .circle {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .label {
+      font-size: 45px;
+    }
+  
+    .carA1 {
+      width: 80%;
+      height: 80%;
+    }
+  
+    .rectangle:first-child .car {
+      top: calc(25% - 30px);
+      left: calc(25% - 30px);
+    }
+  }
+  
